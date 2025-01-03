@@ -21,35 +21,35 @@ const Projects = () => {
     {
       title: 'Doctor Search',
       image: DoctorSearch,
-      skills: 'React <span>•</span> Geolib <span>•</span> Axios <span>•</span> React Paginate',
+      skills: 'React • Geolib • Axios • React Paginate',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
       title: 'EveryTown USA',
       image: Everytown,
-      skills: 'jQuery <span>•</span> KineticJS <span>•</span> HTML <span>•</span> CSS',
+      skills: 'jQuery • KineticJS • HTML • CSS',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
       title: 'Reddit Monitor',
       image: RedditMonitor,
-      skills: 'Python <span>•</span> PRAW <span>•</span> Smtplib <span>•</span> Dotenv <span>•</span> Pytz',
+      skills: 'Python • PRAW • Smtplib • Dotenv • Pytz',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
       title: 'VA Calculator',
       image: VaCalc,
-      skills: 'React <span>•</span> JavaScript <span>•</span> HTML <span>•</span> CSS',
+      skills: 'React • JavaScript • HTML • CSS',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
       title: 'Website Crawler',
       image: WebCrawler,
-      skills: 'Python <span>•</span> Requests <span>•</span> Beautifulsoup4 <span>•</span> Urllib',
+      skills: 'Python • Requests • Beautifulsoup4 • Urllib',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
@@ -104,7 +104,7 @@ const Projects = () => {
                   </div>
                 </div>
                 <div className="project-bottom-text">
-                  <p className="project-skills"><div dangerouslySetInnerHTML={{ __html: project.skills }} /></p>
+                  <p className="project-skills">{ project.skills }</p>
                   <div className="project-links">
                     <a href="#">
                       <img src={github} alt="GitHub" width="30" height="30" />

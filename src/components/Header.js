@@ -3,6 +3,7 @@ import { Link, animateScroll as scroll } from 'react-scroll';
 import { motion } from 'framer-motion'
 
 import Logo from "../assets/images/Logo.jpg"
+import Resume from "../assets/pdf/Web_Developer_Resume.pdf"
 
 const Header = ({ onToggle, showNavbar }) => {
 
@@ -113,7 +114,7 @@ const Header = ({ onToggle, showNavbar }) => {
                                 transition={{ duration: 0.5, delay: 0.2 }}
                                 viewport={{ once: true, amount: 0.5 }}
                             >
-                                <a className="resume-link" href="">RESUME</a>
+                                <a href={Resume} className="resume-link" rel="noreferrer" target="_blank">RESUME</a>
                             </motion.div>
                         </li>
                     </ul>
