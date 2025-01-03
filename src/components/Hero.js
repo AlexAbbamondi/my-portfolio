@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 import profile from "../assets/images/AlexA.jpg"
 import handwave from "../assets/images/waving-hand.svg"
@@ -49,16 +50,23 @@ const hero = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           viewport={{ once: true, amount: 0.5 }}
         />
-        <motion.a
-          className='button'
-          href=''
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: .5 }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          Contact
-        </motion.a>
+          <Link
+            className='button'
+            to="Contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+        >
+            CONTACT
+        </Link>
+        </motion.div>
       </div>
       <div className="hero-image">
 

@@ -5,6 +5,7 @@ import github from "../assets/images/github-white.svg"
 import linkedin from "../assets/images/linkedin.svg"
 import signature from "../assets/images/my-signature.png"
 import Logo from "../assets/images/footer-logo.jpg"
+import Resume from "../assets/pdf/Web_Developer_Resume.pdf"
 
 const Footer = () => {
     const year = new Date().getFullYear();
@@ -15,7 +16,7 @@ const Footer = () => {
                 <div className="upper-footer">
                     <div className="upper-footer-left">
                         <p>Alex Abbamondi is a web developer and SEO expert with a specialism in WordPress and React</p>
-                        <a className="button" href="">Resume</a>
+                        <a href={Resume} className="button" rel="noreferrer" target="_blank">RESUME</a>
                         <img src={signature} alt="" width="211" height="55" />
                     </div>
                     <div className="upper-footer-middle">
@@ -76,10 +77,10 @@ const Footer = () => {
                         <p>Alex Abbamondi • © {year} • All Rights Reserved</p>
                     </div>
                     <div className="lower-footer-right">
-                        <a href="">
+                        <a href="https://www.linkedin.com/in/alexabbamondi/">
                             <img src={linkedin} alt="" width="35" height="35" />
                         </a>
-                        <a href="">
+                        <a href="https://github.com/AlexAbbamondi/">
                             <img src={github} alt="" width="30" height="30" />
                         </a>
                     </div>

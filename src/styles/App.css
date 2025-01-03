@@ -71,25 +71,6 @@ ul li {
   position: relative;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* NavBar */
 .navbar {
   position: relative;
   height: 70px;
@@ -151,11 +132,6 @@ ul li {
   font-weight: 500;
 }
 
-
-
-
-
-/* Hero */
 .hero {
   padding: 30px 0 110px 0
 }
@@ -239,10 +215,9 @@ ul li {
   text-decoration: none;
   text-align: center;
   transition: .3s;
+  cursor: pointer;
 }
 
-
-/* Skills */
 .projects,
 .skills {
   background-color: #f5f9fb;
@@ -309,7 +284,6 @@ ul li {
   font-size: 32px;
 }
 
-/* Experience */
 .experience,
 .contact {
   background-color: var(--white);
@@ -321,14 +295,9 @@ ul li {
 
 .experience-buttons-slider {
   overflow-x: auto;
-  /* Enable horizontal scrolling */
   white-space: nowrap;
   -ms-overflow-style: none;
-  /* Internet Explorer 10+ */
   scrollbar-width: none;
-  /* Firefox */
-
-  /* Hide scrollbars in Webkit-based browsers like Chrome and Safari */
   &::-webkit-scrollbar {
     display: none;
   }
@@ -336,7 +305,6 @@ ul li {
 
 .experience-button {
   flex: none;
-  /* Prevent flexbox from growing/shrinking buttons */
   padding: 8px 16px;
   font-size: 1rem;
   background-color: transparent;
@@ -344,18 +312,14 @@ ul li {
   cursor: pointer;
   text-align: center;
   overflow: hidden;
-  /* Hide overflowed content */
   text-overflow: ellipsis;
-  /* Display ellipsis (...) for overflowing text */
   white-space: nowrap;
-  /* Prevent text wrapping */
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 
 }
 
 .experience-button.active {
   border-bottom: 2px solid var(--primary-medium-blue);
-  /* Indicate active button with underline */
   color: var(--primary-medium-blue)
 }
 
@@ -389,11 +353,6 @@ ul li {
   transform: scale(0.25);
 }
 
-
-
-
-
-/* Works */
 .projects,
 .contact,
 .experience {
@@ -425,8 +384,6 @@ ul li {
 
 .project-bottom-text {
   position: relative;
-  left: 10%;
-  width: 90%;
   text-align: end;
 }
 
@@ -469,19 +426,6 @@ ul li {
   box-shadow: 0px 10px 20px 0px rgba(0, 25, 50, 0.05);
 }
 
-/* .project-image::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #161c24;
-  mix-blend-mode: multiply;
-  opacity: 0.4;
-  pointer-events: none;
-} */
-
 .project-image img {
   display: block;
   transition: .5s;
@@ -509,8 +453,38 @@ ul li {
 .projects-container button {
   margin: 30px auto 0 auto;
   display: flex;
+  align-items: center;
+  width: 260px;
 }
 
+.load-more-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--primary-medium-blue);
+  font-size: 20px;
+  font-weight: 500;
+  white-space: nowrap;
+  gap: 15px;
+}
+
+.load-more-btn:before {
+  content: '';
+  background-color: var(--primary-medium-blue);
+  height: 1px;
+  width: 100%
+}
+
+.load-more-btn:after {
+  content: '';
+  background-color: var(--primary-medium-blue);
+  height: 1px;
+  width: 100%
+}
+
+.load-more-btn:hover {
+  text-decoration: underline;
+}
 
 
 .modal-backdrop {
@@ -789,6 +763,7 @@ footer {
     flex-direction: column;
     position: relative;
     top: 60px;
+    gap: 15px;
   }
 
   .nav-links ul li a {
@@ -1021,6 +996,11 @@ footer {
   .project-description-container {
     margin-top: 0;
     background-color: rgba(255, 255, 255, 1);
+  }
+
+  .project-bottom-text {
+    left: 10%;
+    width: 90%;
   }
 
   .project-flip .project-bottom-text {
